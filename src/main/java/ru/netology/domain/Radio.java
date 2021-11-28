@@ -4,7 +4,7 @@ public class Radio {
     private int currentStation;
     private int currentVolume;
     private int maxStation = 10;
-    private int firstStation;
+
 
     public Radio() {
     }
@@ -62,22 +62,22 @@ public class Radio {
         }
 
         if (currentStation >= maxStation) {
-            currentStation = firstStation;
+            currentStation = 0;
         }
     }
 
 
     public void reduceStation() {
 
-        if (currentStation == firstStation) {
+        if (currentStation == 0) {
             currentStation = currentStation - 1;
         }
 
-        if (currentStation > firstStation) {
+        if (currentStation > 0) {
             currentStation = currentStation - 1;
         }
 
-        if (currentStation <= firstStation - 1) {
+        if (currentStation <= - 1) {
             currentStation = maxStation - 1;
         }
 
