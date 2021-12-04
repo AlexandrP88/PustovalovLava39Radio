@@ -108,7 +108,7 @@ class RadioTest {
     public void shouldChangeMaxStation() {
         Radio radio = new Radio(50);
         radio.setCurrentStation(49);
-        radio.setMaxStation(48);
+        radio.setAmountStation(48);
         radio.increaseStation();
         assertEquals(0, radio.getCurrentStation());
 
@@ -119,7 +119,7 @@ class RadioTest {
         Radio radio = new Radio();
         radio.setCurrentStation(0);
         radio.reduceStation();
-        radio.setMaxStation(0);
+        radio.setAmountStation(0);
         radio.reduceStation();
         assertEquals(8, radio.getCurrentStation());
 
