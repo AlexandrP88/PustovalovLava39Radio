@@ -73,7 +73,7 @@ public class Radio {
             currentStation = currentStation - 1;
         }
 
-        if (currentStation <= - 1) {
+        if (currentStation <= -1) {
             currentStation = amountStation - 1;
         }
 
