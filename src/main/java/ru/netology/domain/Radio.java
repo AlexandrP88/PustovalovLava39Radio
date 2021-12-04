@@ -3,26 +3,22 @@ package ru.netology.domain;
 public class Radio {
     private int currentStation;
     private int currentVolume;
-    private int maxStation = 10;
+    private int amountStation = 10;
 
 
     public Radio() {
     }
 
-    public Radio(int maxStation) {
-        this.maxStation = maxStation;
+    public Radio(int amountStation) {
+        this.amountStation = amountStation;
     }
 
-    public int getMaxStation() {
-        return maxStation;
+    public int getAmountStation() {
+        return amountStation;
     }
 
-    public void setMaxStation(int maxStation) {
-        if (maxStation <= 0) {
-            return;
-        }
-        this.maxStation = maxStation;
-
+    public void setAmountStation(int amountStation) {
+        this.amountStation = amountStation;
     }
 
     public int getCurrentStation() {
@@ -30,7 +26,7 @@ public class Radio {
     }
 
     public void setCurrentStation(int currentStation) {
-        if (currentStation > maxStation - 1) {
+        if (currentStation > amountStation - 1) {
             return;
         }
         if (currentStation < 0) {
@@ -57,11 +53,11 @@ public class Radio {
 
     public void increaseStation() {
 
-        if (currentStation < maxStation) {
+        if (currentStation < amountStation) {
             currentStation = currentStation + 1;
         }
 
-        if (currentStation >= maxStation) {
+        if (currentStation >= amountStation) {
             currentStation = 0;
         }
     }
@@ -78,7 +74,7 @@ public class Radio {
         }
 
         if (currentStation <= - 1) {
-            currentStation = maxStation - 1;
+            currentStation = amountStation - 1;
         }
 
     }
